@@ -32,6 +32,7 @@ class ArticlesTableViewCell: UITableViewCell {
 		updateShadow()
 	}
 	
+	//Add card shadow for the view
 	private func updateShadow(){
 		containerView.layer.cornerRadius = 10
 		articleImageView.layer.cornerRadius = 10

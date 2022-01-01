@@ -77,7 +77,7 @@ class ArticlesViewController: UIViewController{
 
 extension ArticlesViewController {
 	func showError(message: String?) {
-		displayMessage(title: "Ooh! Something went wrong!", message: message)
+		displayMessage(title: "Something went wrong!", message: message)
 	}
 
 	func startLoading() {

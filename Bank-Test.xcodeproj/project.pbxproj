@@ -26,7 +26,6 @@
 		F98E3F4F2780A669008D5B10 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E3F4E2780A669008D5B10 /* UIImageView+Extension.swift */; };
 		F98E3F512780A9C7008D5B10 /* ArticleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E3F502780A9C7008D5B10 /* ArticleCellViewModel.swift */; };
 		F98E3F562780B0A6008D5B10 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E3F552780B0A6008D5B10 /* ArticleDetailsViewController.swift */; };
-		F98E3F5A2780B320008D5B10 /* ArticleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E3F592780B320008D5B10 /* ArticleDetailsViewModel.swift */; };
 		F98E3F5C2780B675008D5B10 /* StoryBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E3F5B2780B675008D5B10 /* StoryBoards.swift */; };
 		F98E3F5F2780BC64008D5B10 /* MockArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E3F5E2780BC64008D5B10 /* MockArticlesService.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		F98E3F4E2780A669008D5B10 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		F98E3F502780A9C7008D5B10 /* ArticleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellViewModel.swift; sourceTree = "<group>"; };
 		F98E3F552780B0A6008D5B10 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
-		F98E3F592780B320008D5B10 /* ArticleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModel.swift; sourceTree = "<group>"; };
 		F98E3F5B2780B675008D5B10 /* StoryBoards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoards.swift; sourceTree = "<group>"; };
 		F98E3F5E2780BC64008D5B10 /* MockArticlesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArticlesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,7 +235,6 @@
 		F98E3F542780B084008D5B10 /* Article Details */ = {
 			isa = PBXGroup;
 			children = (
-				F98E3F582780B312008D5B10 /* View Model */,
 				F98E3F572780B30F008D5B10 /* View */,
 			);
 			path = "Article Details";
@@ -249,14 +246,6 @@
 				F98E3F552780B0A6008D5B10 /* ArticleDetailsViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F98E3F582780B312008D5B10 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				F98E3F592780B320008D5B10 /* ArticleDetailsViewModel.swift */,
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		F98E3F5D2780BC54008D5B10 /* Mocks */ = {
@@ -413,7 +402,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F98E3F5A2780B320008D5B10 /* ArticleDetailsViewModel.swift in Sources */,
 				F98E3F47278091C4008D5B10 /* ArticlesService.swift in Sources */,
 				F98E3F3C27808C8A008D5B10 /* UIViewController+Extension.swift in Sources */,
 				F98E3F5C2780B675008D5B10 /* StoryBoards.swift in Sources */,

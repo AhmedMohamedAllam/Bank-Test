@@ -36,6 +36,7 @@ extension ArticlesListViewModel {
 		let receiveCompletionHandler: (Subscribers.Completion<Error>) -> Void = { [weak self] completion in
 			switch completion {
 			case .failure(let error):
+				self?.state = .finishedLoading
 				self?.state = .error(error.localizedDescription)
 			case .finished:
 				self?.state = .finishedLoading

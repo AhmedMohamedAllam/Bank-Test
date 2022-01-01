@@ -32,7 +32,7 @@ extension NYTimesAPI: TargetType{
 	var task: Task {
 		switch self {
 		case .mostPopularArticles:
-			return .requestParameters(parameters: ["api-key": "owsZ8Av5xmSuNKH5iX8iWNi093G8hGL9"], encoding: URLEncoding.queryString)
+			return .requestParameters(parameters: ["api-key": Constants.apiKey], encoding: URLEncoding.queryString)
 		}
 	}
 	
