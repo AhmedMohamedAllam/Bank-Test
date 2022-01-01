@@ -14,7 +14,7 @@ class ArticlesViewController: UIViewController{
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
 	private let refreshControl = UIRefreshControl()
-	private lazy var viewModel = ArticlesViewModel()
+	private lazy var viewModel = ArticlesListViewModel()
 	private var bindings = Set<AnyCancellable>()
 
 

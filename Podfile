@@ -5,6 +5,7 @@ target 'Bank-Test' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+	pod 'Moya'
     pod 'Moya/Combine'
 		pod 'Kingfisher'
 

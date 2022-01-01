@@ -10,7 +10,7 @@ import Combine
 import Moya
 
 protocol ArticlesServiceProtocol {
-	func getArticles() -> AnyPublisher<[Article], MoyaError>
+	func getArticles() -> AnyPublisher<[Article], Error>
 }
 
 class ArticlesService: ArticlesServiceProtocol {
@@ -20,10 +20,11 @@ class ArticlesService: ArticlesServiceProtocol {
 		self.provider = provider
 	}
 	
-	func getArticles() -> AnyPublisher<[Article], MoyaError> {
+	func getArticles() -> AnyPublisher<[Article], Error> {
 		provider.requestPublisher(.mostPopularArticles, callbackQueue: .main)
 			.map(ArticleList.self)
 			.map({$0.results})
+			.mapError({$0 as Error})
 			.eraseToAnyPublisher()
 	}
 }

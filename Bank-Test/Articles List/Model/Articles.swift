@@ -14,11 +14,14 @@ struct ArticleList: Codable {
 }
 
 // MARK: - Result
-struct Article: Codable {
+struct Article: Codable, Equatable {
+	
+	
 	let id: Int
 	let url: String
 	let source: String
-	let publishedDate, updated: String
+	let publishedDate: String
+	let updated: String
 	let adxKeywords: String
 	let title, abstract: String
 	let media: [Media]
@@ -28,6 +31,11 @@ struct Article: Codable {
 		case publishedDate = "published_date"
 		case adxKeywords = "adx_keywords"
 	}
+	
+	static func == (lhs: Article, rhs: Article) -> Bool {
+		lhs.id == rhs.id
+	}
+	
 }
 
 // MARK: - Media

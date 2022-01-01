@@ -9,13 +9,13 @@ import Foundation
 import Combine
 import Moya
 
-enum ArticlesViewModelState {
+enum ArticlesViewModelState: Equatable {
 	case startedLoading
 	case finishedLoading
 	case error(String)
 }
 
-class ArticlesViewModel{
+class ArticlesListViewModel{
 	@Published private(set) var articles: [Article] = []
 	@Published private(set) var state: ArticlesViewModelState = .startedLoading
 	private let articlesService: ArticlesServiceProtocol
@@ -29,14 +29,14 @@ class ArticlesViewModel{
 }
 
 
-extension ArticlesViewModel {
+extension ArticlesListViewModel {
 	func fetchArticles() {
 		state = .startedLoading
 		
-		let receiveCompletionHandler: (Subscribers.Completion<MoyaError>) -> Void = { [weak self] completion in
+		let receiveCompletionHandler: (Subscribers.Completion<Error>) -> Void = { [weak self] completion in
 			switch completion {
-			case .failure:
-				self?.state = .error("Cannot fetch Articles")
+			case .failure(let error):
+				self?.state = .error(error.localizedDescription)
 			case .finished:
 				self?.state = .finishedLoading
 			}
